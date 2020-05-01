@@ -39,7 +39,7 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
-logging.basicConfig(format='%(levelname)s: %(message)s', level=logging.INFO)
+logging.basicConfig(format='%(levelname)s:	%(message)s', level=logging.INFO)
 
 
 def get_dates_in_range(start_date: date, end_date: date) -> list:
