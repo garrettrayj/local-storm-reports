@@ -71,7 +71,7 @@ class Downloader:
         reports = []
 
         def clean_content(el):
-            return re.sub(' +', ' ', el.text).replace('\n', '').replace('\t', '').strip()
+            return re.sub(' +', ' ', el.text).replace('\n', ' ').replace('\t', ' ').strip()
 
         for table_row in table_rows:
             if len(table_row.contents) != 8:

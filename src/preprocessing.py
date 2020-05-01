@@ -53,7 +53,7 @@ class HailReportPreprocessor:
 
                         try:
                             lsr_time = time(int(column_search.group(1)[:2]), int(column_search.group(1)[2:]))
-                            lsr_datetime = datetime.combine(lsr_date, lsr_time, tzinfo=pytz.timezone('Etc/GMT-12'))
+                            lsr_datetime = datetime.combine(lsr_date, lsr_time, tzinfo=pytz.timezone('Etc/GMT+12'))
                         except Exception as e:
                             logging.warning(
                                 'Invalid time data "%s". Skipping %s, line %s',
